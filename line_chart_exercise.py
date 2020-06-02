@@ -19,7 +19,7 @@ def decribe_data(df):
     print("Information", df.info())
 
 
-data = [go.Scatter(x=df[df['DAY'].str.contains(day)]['LST_TIME'],
+data = [go.Scatter(x=df['LST_TIME'],
                    y=df[df['DAY'] == day]['T_HR_AVG'],
                    mode='lines+markers',
                    name=day)
